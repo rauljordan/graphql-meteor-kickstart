@@ -1,10 +1,14 @@
-import { Counts } from '/lib/collections';
+/* @flow */
+import { CountItem } from '../data';
+import type { CountType } from '../types';
 
 export default {
-  counts(root, { sort }, context) {
+  counts(
+    root: Object, { sort }: { sort: string }, { userId }: { userId: string}
+  ): Array<CountType> {
     if (sort === 'Biggest') {
-      return Counts.find({}, { sort: { amount: -1 } }).fetch();
+      return CountItem.genAllCounts({sort: { createdAt: -1 }});
     }
-    return Counts.find({}, { sort: { amount: 1 } }).fetch(); 
+    return CountItem.genAllCounts({sort: { createdAt: -1 }});
   }
 };

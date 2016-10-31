@@ -5,8 +5,12 @@ export default [
   type Query {
     counts(sort: String): [Count]
   }
+  type Mutation {
+    addCount: Count
+  }
   schema {
-    query: Query
+    query: Query,
+    mutation: Mutation
   }
   `,
   counts.schema
