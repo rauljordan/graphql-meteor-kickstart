@@ -3,14 +3,10 @@ import counts from '/imports/server/counts';
 export default [
   `
   type Query {
-
-  }
-  type Mutation {
-
+    counts: [Count]
   }
   schema {
     query: Query
-    mutation: Mutation
   }
   `,
   counts.schema

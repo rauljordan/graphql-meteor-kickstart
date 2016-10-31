@@ -13,3 +13,15 @@ createApolloServer({
     resolvers,
   })
 });
+
+import { Counts } from '/lib/collections';
+
+const counts = [1, 2, 3, 4, 5];
+counts.forEach(amount => {
+  if (!Counts.findOne({amount})) {
+    Counts.insert({
+      amount,
+      createdAt: new Date
+    });
+  }
+});
