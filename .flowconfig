@@ -1,0 +1,20 @@
+[libs]
+
+[ignore]
+.*/node_modules/fbjs/.*
+.*/node_modules/config-chain/test/broken.json
+.*/node_modules/npmconf/test/.*
+.*/.meteor/packages/babel-runtime
+.*/.meteor/packages/meteor-tool
+.*/.meteor/packages/mongo
+.*/.meteor/packages/npm-bcrypt
+.*/node_modules/editions/.*
+.*/node_modules/widgets/.*
+
+[include]
+lib/
+
+[options]
+module.name_mapper='^\/\(.*\)$' -> '<PROJECT_ROOT>/\1'
+module.name_mapper='^meteor\/\(.*\):\(.*\)$' -> '<PROJECT_ROOT>/.meteor/local/build/programs/server/packages/\1_\2'
+module.name_mapper='^meteor\/\(.*\)$' -> '<PROJECT_ROOT>/.meteor/local/build/programs/server/packages/\1'
