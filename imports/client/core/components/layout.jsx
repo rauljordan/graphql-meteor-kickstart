@@ -2,7 +2,7 @@ import React from 'react';
 import { ApolloProvider } from 'react-apollo';
 
 const Layout = ({
-  content = () => null
+  content = () => null,
   context
 }) => {
   const { client, Store } = context();
