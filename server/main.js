@@ -10,7 +10,7 @@ import { makeExecutableSchema } from 'graphql-tools';
 createApolloServer({
   schema: makeExecutableSchema({
     typeDefs: schema,
-    resolvers,
+    resolvers
   })
 });
 

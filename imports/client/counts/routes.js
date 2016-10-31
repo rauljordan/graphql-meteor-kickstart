@@ -2,7 +2,7 @@ import React from 'react';
 import { mount } from 'react-mounter';
 
 import Layout from '/imports/client/core/containers/layout';
-import Counts from './components/counts';
+import Counts from './containers/counts';
 
 export default (injectDeps, {FlowRouter}) => {
   const LayoutCtx = injectDeps(Layout);
@@ -15,4 +15,5 @@ export default (injectDeps, {FlowRouter}) => {
       });
     }
   });
+
 };

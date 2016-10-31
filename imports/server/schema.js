@@ -3,7 +3,7 @@ import counts from '/imports/server/counts';
 export default [
   `
   type Query {
-    counts: [Count]
+    counts(sort: String): [Count]
   }
   schema {
     query: Query
