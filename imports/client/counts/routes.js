@@ -7,13 +7,12 @@ import Counts from './components/counts';
 export default (injectDeps, {FlowRouter}) => {
   const LayoutCtx = injectDeps(Layout);
 
-  FlowRouter.route('/', {
-    name: 'home',
+  FlowRouter.route('/counts', {
+    name: 'counts',
     action() {
       mount(LayoutCtx, {
         content: () => (<Counts/>)
       });
     }
   });
-
 };

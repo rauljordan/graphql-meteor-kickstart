@@ -12,13 +12,6 @@ import { createStore, applyMiddleware, combineReducers } from 'redux';
  */
 export default (appReducer) => {
 
-  FlowRouter.wait();
-  Tracker.autorun(() => {
-    if (Roles.subscription.ready() && !FlowRouter._initialized) {
-      FlowRouter.initialize();
-    }
-  });
-
   /**
    *  We initialize the apollo client instance and create the store
    */
