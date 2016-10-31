@@ -7,7 +7,7 @@ import { combineReducers } from 'redux';
  */
 import coreModule from '/imports/client/core';
 import countsModule from '/imports/client/counts';
-console.log(countsModule.routes);
+
 /**
  * This initializes the global context of our application (see configs for
  * details), such as Meteor, FlowRouter, and all the Collections
